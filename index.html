@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Умная Теплица — Интерактивный 3D-проект | Хусиханова Камила</title>
+  
+  <meta name="description" content="Инновационный проект «Умная Теплица»: интерактивная 3D-модель, видео-обзор, система автоматического полива, контроль климата, сырые эскизы и 2K рендеры. Автор: Хусиханова Камила.">
+  <meta name="keywords" content="умная теплица, 3D модель, SketchUp, Three.js, автоматизация, микроклимат, автополив, рендеры, архитектура">
+  <meta name="author" content="Хусиханова Камила">
+  
+  <!-- Favicon Icon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. HEADER & NAVBAR (Design: Frame 8 Header)
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo">
+        <div class="logo-icon">🌿</div>
+        <div class="logo-text">Умная <span>Теплица</span></div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link active">Главная</a></li>
+          <li><a href="#about" class="nav-link">О проекте</a></li>
+          <li><a href="#video" class="nav-link">Видео-обзор</a></li>
+          <li><a href="#comparison" class="nav-link">Сравнение 3D</a></li>
+          <li><a href="#gallery" class="nav-link">Галерея</a></li>
+          <li><a href="#model3d" class="nav-link">3D Модель</a></li>
+          <li><a href="#specs" class="nav-link">Спецификация</a></li>
+        </ul>
+      </nav>
+
+      <a href="#model3d" class="nav-cta">
+        <span>⚅</span> 3D Просмотр
+      </a>
+
+      <button class="mobile-menu-btn" aria-label="Открыть меню">☰</button>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       2. HERO SECTION (Design: Frame 8 Hero Banner with Author Pill & Badges)
+       ======================================================================== -->
+  <section id="hero" class="hero-section">
+    <div class="hero-bg-container">
+      <img src="assets/images/renders/hero.jpg" alt="Финальный 2K рендер Умной Теплицы" class="hero-bg-image">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container hero-content">
+      <!-- Author Pill from Figma Design -->
+      <div class="author-pill">
+        <div class="author-avatar">ХК</div>
+        <div class="author-info">
+          <span class="author-name">Хусиханова Камила</span>
+          <span class="author-role">Автор & 3D-разработчик</span>
+        </div>
+        <span class="age-badge">12+</span>
+      </div>
+
+      <h1 class="hero-title">
+        Интеллектуальная система <br>
+        <span class="highlight">«Умная Теплица»</span>
+      </h1>
+
+      <p class="hero-description">
+        Комплексная архитектурная концепция и инженерная 3D-модель автономной теплицы с автоматическим климат-контролем, капельным орошением, фитоподсветкой и солнечной генерацией.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#model3d" class="btn btn-primary">
+          <span>🔍</span> Интерактивная 3D-модель
+        </a>
+        <a href="#video" class="btn btn-glass">
+          <span>▶</span> Смотреть видео-обзор
+        </a>
+        <a href="#gallery" class="btn btn-glass">
+          <span>🖼</span> Фотогалерея (2K)
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-value">360°</div>
+          <div class="stat-label">Интерактивный 3D-обзор в WebGL</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">2K UHD</div>
+          <div class="stat-label">Детализированные фото-рендеры</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">100%</div>
+          <div class="stat-label">Автоматизация микроклимата</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">SketchUp</div>
+          <div class="stat-label">Точная инженерная геометрия</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       3. ABOUT & FEATURES SECTION
+       ======================================================================== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Инновационные технологии</span>
+        <h2 class="section-title">Автоматизация & Энергоэффективность</h2>
+        <p class="section-subtitle">
+          Теплица разработана для круглогодичного выращивания культур с минимальным участием человека благодаря датчикам и интеллектуальным исполнительным механизмам.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">🌡️</div>
+          <h3 class="feature-title">Климат-контроль</h3>
+          <p class="feature-text">
+            Автоматическое регулирование температуры и проветривания с помощью сервоприводов верхних форточек и вытяжных вентиляторов при превышении пороговых значений.
+          </p>
+          <div class="feature-badge">Датчики DHT22 / BME280</div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">💧</div>
+          <h3 class="feature-title">Капельный полив</h3>
+          <p class="feature-text">
+            Дозированная подача питательного раствора прямо к корневой системе растений по показаниям емкостных датчиков влажности почвы.
+          </p>
+          <div class="feature-badge">Электромагнитные клапаны</div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">💡</div>
+          <h3 class="feature-title">LED-фитоосвещение</h3>
+          <p class="feature-text">
+            Полноспектральные светодиодные модули стимулируют фотосинтез в пасмурные дни и продлевают световой день в осенне-зимний период.
+          </p>
+          <div class="feature-badge">Спектр Full-Spectrum</div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">☀️</div>
+          <h3 class="feature-title">Солнечные панели</h3>
+          <p class="feature-text">
+            Интегрированные в скат крыши фотоэлектрические элементы обеспечивают питание микроконтроллера, помпы и системы датчиков.
+          </p>
+          <div class="feature-badge">Автономное питание</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. VIDEO REVIEW BLOCK (Requested: Блок с видео-обзором)
+       ======================================================================== -->
+  <section id="video" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Мультимедиа презентация</span>
+        <h2 class="section-title">Видео-обзор проекта</h2>
+        <p class="section-subtitle">
+          Наглядная демонстрация 3D-модели, конструкции каркаса, внутренних узлов и систем автоматизации теплицы.
+        </p>
+      </div>
+
+      <div class="video-wrapper">
+        <div class="video-player-card">
+          <div class="video-container">
+            <video id="project-video" controls preload="metadata" poster="assets/images/renders/architectural_view.jpg">
+              <source src="assets/video/overview.mp4" type="video/mp4">
+              Ваш браузер не поддерживает встроенное воспроизведение видео.
+            </video>
+
+            <div id="video-overlay" class="video-play-overlay">
+              <div class="play-circle">▶</div>
+              <div class="play-label">Воспроизвести видео-обзор</div>
+            </div>
+          </div>
+
+          <div class="video-details-bar">
+            <div class="video-meta-info">
+              <h4>Обзор концепта «Умная Теплица»</h4>
+              <p>Формат: MP4 Full HD • Автор: Хусиханова Камила</p>
+            </div>
+            <div class="video-badges">
+              <span class="feature-badge">HD Видео</span>
+              <span class="feature-badge">3D Анимация</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. BEFORE / AFTER COMPARISON SLIDER (Raw vs Rendered 3D)
+       ======================================================================== -->
+  <section id="comparison" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Эволюция модели</span>
+        <h2 class="section-title">Сырой 3D-эскиз против 2K Рендера</h2>
+        <p class="section-subtitle">
+          Потяните разделитель влево или вправо, чтобы сравнить каркасную геометрию SketchUp и фотореалистичную визуализацию.
+        </p>
+      </div>
+
+      <div class="comparison-container">
+        <div class="compare-box">
+          <!-- Rendered Image (Right Background) -->
+          <div class="compare-img rendered-img">
+            <img src="assets/images/renders/hero.jpg" alt="Финальный фотореалистичный 2K рендер">
+            <div class="compare-badge badge-rendered">✨ 2K Фоторендер</div>
+          </div>
+
+          <!-- Raw Sketch Image (Left Overlay) -->
+          <div class="compare-img raw-img">
+            <img src="assets/images/raw/raw_main.jpg" alt="Сырая 3D-модель в SketchUp">
+            <div class="compare-badge badge-raw">📐 Сырой 3D эскиз</div>
+          </div>
+
+          <!-- Draggable Slider Handle -->
+          <div class="compare-slider-handle">
+            <div class="handle-button">⇆</div>
+          </div>
+        </div>
+        <p class="compare-hint">💡 Зажмите и перемещайте ползунок для сравнения деталей конструкции</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. GALLERY BLOCK (Rendered & Raw Photos Gallery with Filters)
+       ======================================================================== -->
+  <section id="gallery" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Визуальный архив</span>
+        <h2 class="section-title">Галерея проекта</h2>
+        <p class="section-subtitle">
+          Полная коллекция фотореалистичных 2K рендеров и рабочих сырых скриншотов этапов 3D-моделирования.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="gallery-filter-tabs">
+        <button class="filter-tab active" data-filter="all">Все изображения (12)</button>
+        <button class="filter-tab" data-filter="renders">✨ 2K Рендеры (7)</button>
+        <button class="filter-tab" data-filter="raw">📐 Сырые фото 3D (5)</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid">
+        <!-- Render 1 (Hero View) -->
+        <div class="gallery-item" data-category="renders" data-full="assets/images/renders/hero.jpg">
+          <img src="assets/images/renders/hero.jpg" alt="Архитектурный вид теплицы 2K" loading="lazy">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-badge badge-render-cat">2K Рендер</span>
+            <h3 class="gallery-item-title">Главный архитектурный ракурс</h3>
+            <p class="gallery-item-desc">Вид в естественном окружении с отражениями неба</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <!-- Render 2 (Architectural View) -->
+        <div class="gallery-item" data-category="renders" data-full="assets/images/renders/architectural_view.jpg">
+          <img src="assets/images/renders/architectural_view.jpg" alt="Перспективный вид теплицы" loading="lazy">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-badge badge-render-cat">2K Рендер</span>
+            <h3 class="gallery-item-title">Общая перспектива модели</h3>
+            <p class="gallery-item-desc">Конструкция каркаса и остекления скатов</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <!-- Render 3 (Macro Details) -->
+        <div class="gallery-item" data-category="renders" data-full="assets/images/renders/macro_details.jpg">
+          <img src="assets/images/renders/macro_details.jpg" alt="Макро-ракурс деталей" loading="lazy">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-badge badge-render-cat">2K Рендер</span>
+            <h3 class="gallery-item-title">Макро-детализация узлов</h3>
+            <p class="gallery-item-desc">Стыки металлопрофиля и текстура покрытия</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <!-- Render 4 (Zoom View) -->
+        <div class="gallery-item" data-category="renders" data-full="assets/images/renders/zoom_view.jpg">
+          <img src="assets/images/renders/zoom_view.jpg" alt="Приближенный ракурс теплицы" loading="lazy">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-badge badge-render-cat">2K Рендер</span>
+            <h3 class="gallery-item-title">Приближенный план фасада</h3>
+            <p class="gallery-item-desc">Входная группа и вентиляционные секции</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <!-- Render 5 (Pan Details) -->
+        <div class="gallery-item" data-category="renders" data-full="assets/images/renders/pan_details.jpg">
+          <img src="assets/images/renders/pan_details.jpg" alt="Панорамный снимок конструкции" loading="lazy">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-badge badge-render-cat">2K Рендер</span>
+            <h3 class="gallery-item-title">Панорама конструкции снизу-вверх</h3>
+            <p class="gallery-item-desc">Геометрия стропильной системы крыши</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <!-- Render 6 (Side Profile) -->
+        <div class="gallery-item" data-category="renders" data-full="assets/images/renders/side_profile.jpg">
+          <img src="assets/images/renders/side_profile.jpg" alt="Боковой профиль теплицы" loading="lazy">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-badge badge-render-cat">2K Рендер</span>
+            <h3 class="gallery-item-title">Боковой профиль</h3>
+            <p class="gallery-item-desc">Пропорции и расположение грядок</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <!-- Render 7 (Concept Render) -->
+        <div class="gallery-item" data-category="renders" data-full="assets/images/renders/concept_render.jpg">
+          <img src="assets/images/renders/concept_render.jpg" alt="Художественный концепт-арт" loading="lazy">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-badge badge-render-cat">2K Рендер</span>
+            <h3 class="gallery-item-title">Художественная концепция</h3>
+            <p class="gallery-item-desc">Визуализация экосистемы в ландшафте</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <!-- Raw 1 (Main Sketch) -->
+        <div class="gallery-item" data-category="raw" data-full="assets/images/raw/raw_main.jpg">
+          <img src="assets/images/raw/raw_main.jpg" alt="Сырой 3D эскиз - ракурс 1" loading="lazy">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-badge badge-raw-cat">Сырой 3D эскиз</span>
+            <h3 class="gallery-item-title">Модель в рабочей среде SketchUp</h3>
+            <p class="gallery-item-desc">Базовая 3D сетка и полигональная основа</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <!-- Raw 2 (Sketch 4) -->
+        <div class="gallery-item" data-category="raw" data-full="assets/images/raw/raw_4.jpg">
+          <img src="assets/images/raw/raw_4.jpg" alt="Сырой 3D эскиз - ракурс 2" loading="lazy">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-badge badge-raw-cat">Сырой 3D эскиз</span>
+            <h3 class="gallery-item-title">Эскиз: Проработка скатов</h3>
+            <p class="gallery-item-desc">Моделирование наклона крыши и вентиляции</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <!-- Raw 3 (Sketch 5) -->
+        <div class="gallery-item" data-category="raw" data-full="assets/images/raw/raw_5.jpg">
+          <img src="assets/images/raw/raw_5.jpg" alt="Сырой 3D эскиз - ракурс 3" loading="lazy">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-badge badge-raw-cat">Сырой 3D эскиз</span>
+            <h3 class="gallery-item-title">Эскиз: Каркас и настил</h3>
+            <p class="gallery-item-desc">Размещение деревянного подиума и стоек</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <!-- Raw 4 (Sketch 6) -->
+        <div class="gallery-item" data-category="raw" data-full="assets/images/raw/raw_6.jpg">
+          <img src="assets/images/raw/raw_6.jpg" alt="Сырой 3D эскиз - ракурс 4" loading="lazy">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-badge badge-raw-cat">Сырой 3D эскиз</span>
+            <h3 class="gallery-item-title">Эскиз: Перспективный ракурс</h3>
+            <p class="gallery-item-desc">Финальная проверка габаритов и пропорций</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <!-- Raw 5 (Alt Sketch 6) -->
+        <div class="gallery-item" data-category="raw" data-full="assets/images/raw/raw_alt6.jpg">
+          <img src="assets/images/raw/raw_alt6.jpg" alt="Сырой 3D эскиз - ракурс 5" loading="lazy">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-badge badge-raw-cat">Сырой 3D эскиз</span>
+            <h3 class="gallery-item-title">Эскиз: Боковой ракурс SketchUp</h3>
+            <p class="gallery-item-desc">Рабочий вид перед экспортом в Collada DAE</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. INTERACTIVE 3D MODEL SECTION (Requested: Блок с 3D моделью)
+       ======================================================================== -->
+  <section id="model3d" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">WebGL Реалтайм 3D</span>
+        <h2 class="section-title">Интерактивная 3D-модель</h2>
+        <p class="section-subtitle">
+          Полноценный интерактивный 3D-просмотрщик. Вращайте, приближайте, переключайте режимы отображения сетки и освещения в реальном времени.
+        </p>
+      </div>
+
+      <div id="viewer-3d-wrapper" class="viewer-3d-card">
+        <div class="viewer-3d-container">
+          <!-- Canvas Container -->
+          <div id="canvas-3d"></div>
+
+          <!-- Loading Screen Overlay -->
+          <div id="viewer-loading" class="viewer-loading-screen">
+            <div class="loader-spinner"></div>
+            <div class="loader-title">Загрузка 3D-модели...</div>
+            <div class="loader-bar-bg">
+              <div id="loader-bar-fill" class="loader-bar-fill"></div>
+            </div>
+            <div id="loader-status" class="loader-status">Подготовка WebGL окружения...</div>
+          </div>
+
+          <!-- On-Canvas Control Buttons -->
+          <div class="viewer-controls-overlay">
+            <button id="btn-3d-rotate" class="viewer-btn active" data-tooltip="Авто-вращение (Вкл/Выкл)">🔄</button>
+            <button id="btn-3d-wireframe" class="viewer-btn" data-tooltip="Режим каркасной сетки">🕸️</button>
+            <button id="btn-3d-light" class="viewer-btn" data-tooltip="Смена освещения (День/Вечер/Студия)">💡</button>
+            <button id="btn-3d-reset" class="viewer-btn" data-tooltip="Сбросить камеру">🎯</button>
+            <button id="btn-3d-fullscreen" class="viewer-btn" data-tooltip="Полноэкранный режим">⛶</button>
+          </div>
+
+          <!-- Instructions Hint -->
+          <div class="viewer-hints">
+            <span>🖱️ <strong>ЛКМ:</strong> Вращение</span>
+            <span>⚙️ <strong>Колесо:</strong> Зум</span>
+            <span>🖱️ <strong>ПКМ:</strong> Панорама</span>
+          </div>
+        </div>
+
+        <!-- 3D Model Meta & Download Bar -->
+        <div class="viewer-info-panel">
+          <div class="model-meta-tags">
+            <div class="meta-tag">Форматы: <strong>.DAE / .SKP / .SKB</strong></div>
+            <div class="meta-tag">Текстуры: <strong>1K PBR Materials</strong></div>
+            <div class="meta-tag">Масштаб: <strong>1:1 (Реальные метры)</strong></div>
+          </div>
+
+          <div class="model-downloads">
+            <a href="3D модель/мой первый 3D.dae" download class="btn btn-glass" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">
+              <span>💾</span> Скачать .DAE (1.3 MB)
+            </a>
+            <a href="3D модель/мой первый 3D.skp" download class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">
+              <span>📥</span> Скачать .SKP (34 MB)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       8. TECHNICAL SPECIFICATIONS SECTION
+       ======================================================================== -->
+  <section id="specs" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Инженерные параметры</span>
+        <h2 class="section-title">Технические характеристики</h2>
+        <p class="section-subtitle">
+          Архитектурные размеры, материалы конструкции и спецификация электронных компонентов автоматики.
+        </p>
+      </div>
+
+      <div class="specs-grid">
+        <!-- Spec Card 1 -->
+        <div class="spec-category-card">
+          <div class="spec-cat-header">
+            <div class="spec-cat-icon">🏗️</div>
+            <h3 class="spec-cat-title">Конструкция & Каркас</h3>
+          </div>
+          <ul class="spec-list">
+            <li class="spec-item">
+              <span class="spec-name">Габариты (Д × Ш × В)</span>
+              <span class="spec-val">8.0 × 6.0 × 4.8 м</span>
+            </li>
+            <li class="spec-item">
+              <span class="spec-name">Полезная площадь</span>
+              <span class="spec-val">48 м²</span>
+            </li>
+            <li class="spec-item">
+              <span class="spec-name">Материал профиля</span>
+              <span class="spec-val">Анодированный алюминий</span>
+            </li>
+            <li class="spec-item">
+              <span class="spec-name">Остекление</span>
+              <span class="spec-val">Закаленное стекло с УФ-фильтром</span>
+            </li>
+            <li class="spec-item">
+              <span class="spec-name">Основание / Подиум</span>
+              <span class="spec-val">Лиственница (Wood Planks 1K)</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Spec Card 2 -->
+        <div class="spec-category-card">
+          <div class="spec-cat-header">
+            <div class="spec-cat-icon">⚡</div>
+            <h3 class="spec-cat-title">Электроника & Датчики</h3>
+          </div>
+          <ul class="spec-list">
+            <li class="spec-item">
+              <span class="spec-name">Главный контроллер</span>
+              <span class="spec-val">ESP32 / STM32 с Wi-Fi & BLE</span>
+            </li>
+            <li class="spec-item">
+              <span class="spec-name">Контроль воздуха</span>
+              <span class="spec-val">DHT22 + Датчик CO₂ (MH-Z19)</span>
+            </li>
+            <li class="spec-item">
+              <span class="spec-name">Влажность почвы</span>
+              <span class="spec-val">Емкостные датчики v1.2</span>
+            </li>
+            <li class="spec-item">
+              <span class="spec-name">Освещенность</span>
+              <span class="spec-val">Люксметр BH1750</span>
+            </li>
+            <li class="spec-item">
+              <span class="spec-name">Приводы форточек</span>
+              <span class="spec-val">Линейные актуаторы 12V</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Spec Card 3 -->
+        <div class="spec-category-card">
+          <div class="spec-cat-header">
+            <div class="spec-cat-icon">🌱</div>
+            <h3 class="spec-cat-title">Агротехнический модуль</h3>
+          </div>
+          <ul class="spec-list">
+            <li class="spec-item">
+              <span class="spec-name">Тип орошения</span>
+              <span class="spec-val">Автоматическое капельное</span>
+            </li>
+            <li class="spec-item">
+              <span class="spec-name">Количество грядок</span>
+              <span class="spec-val">4 изолированные секции</span>
+            </li>
+            <li class="spec-item">
+              <span class="spec-name">Подсветка</span>
+              <span class="spec-val">LED Quantum Board Full-Spectrum</span>
+            </li>
+            <li class="spec-item">
+              <span class="spec-name">Энергообеспечение</span>
+              <span class="spec-val">Солнечные батареи + Аккумулятор</span>
+            </li>
+            <li class="spec-item">
+              <span class="spec-name">Интерфейс управления</span>
+              <span class="spec-val">Web-панель и мобильное приложение</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       9. LIGHTBOX MODAL (For full-screen image inspection)
+       ======================================================================== -->
+  <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true">
+    <button id="lightbox-close" class="lightbox-close" aria-label="Закрыть">✕</button>
+    <button id="lightbox-prev" class="lightbox-prev" aria-label="Назад">❮</button>
+    <button id="lightbox-next" class="lightbox-next" aria-label="Вперед">❯</button>
+
+    <div class="lightbox-content">
+      <div class="lightbox-img-wrapper">
+        <img id="lightbox-image" src="" alt="">
+      </div>
+      <div class="lightbox-caption">
+        <h3 id="lightbox-title"></h3>
+        <p id="lightbox-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       10. FOOTER (Matching Frame 8 Layout)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="logo-icon">🌿</div>
+            <div class="logo-text">Умная <span>Теплица</span></div>
+          </div>
+          <p class="footer-desc">
+            Инновационный инженерный проект архитектурного 3D-моделирования и концепции автоматизированного сельского хозяйства.
+          </p>
+          <div class="footer-author-card">
+            <div class="author-avatar">ХК</div>
+            <div class="author-info">
+              <span class="author-name">Хусиханова Камила</span>
+              <span class="author-role">Автор & Разработчик • 12+</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Навигация</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Главная</a></li>
+            <li><a href="#about">О проекте</a></li>
+            <li><a href="#video">Видео-обзор</a></li>
+            <li><a href="#comparison">Сравнение 3D</a></li>
+            <li><a href="#gallery">Галерея 2K</a></li>
+            <li><a href="#model3d">3D Модель</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Материалы</h4>
+          <ul class="footer-links">
+            <li><a href="Дизайн сайта/Frame 8.svg" target="_blank">Дизайн (Frame 8.svg)</a></li>
+            <li><a href="3D модель/мой первый 3D.dae" download>3D Модель (.DAE)</a></li>
+            <li><a href="3D модель/мой первый 3D.skp" download>SketchUp (.SKP)</a></li>
+            <li><a href="Видео Обзор/у.mp4" download>Видео (.MP4)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>О проекте</h4>
+          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">
+            Сайт сгенерирован на основе дизайн-макета Figma, с интеграцией WebGL Three.js, мультимедиа-плеера и фотогалереи высокого разрешения.
+          </p>
+          <a href="#model3d" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem; width: 100%;">
+            <span>⚅</span> Запустить 3D Viewer
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Проект «Умная Теплица». Автор: Хусиханова Камила. Все права защищены.</div>
+        <a href="#hero" class="back-to-top" aria-label="Наверх">▲</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Three.js Libraries (Local with CDN fallbacks) -->
+  <script src="assets/libs/three.min.js"></script>
+  <script src="assets/libs/OrbitControls.js"></script>
+  <script src="assets/libs/ColladaLoader.js"></script>
+
+  <!-- Fallback CDN in case of local file restriction -->
+  <script>
+    if (typeof THREE === 'undefined') {
+      document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"><\/script>');
+      document.write('<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"><\/script>');
+      document.write('<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/ColladaLoader.js"><\/script>');
+    }
+  </script>
+
+  <!-- Application Logic & 3D Viewer Scripts -->
+  <script src="assets/models/greenhouse_model_data.js?v=20261121"></script>
+  <script src="viewer3d.js?v=20261121"></script>
+  <script src="app.js?v=20261121"></script>
+
+</body>
+</html>

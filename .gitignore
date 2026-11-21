@@ -1,0 +1,14 @@
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+*.tmp
+*.bak
+*.swp
+*~
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+.agents/
+mcp_config.json
